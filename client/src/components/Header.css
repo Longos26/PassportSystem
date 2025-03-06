@@ -1,0 +1,91 @@
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      background: #003366;
+      padding: 30px;
+      color: white;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu li {
+      margin: 0 15px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      background: white;
+      color: black;
+      padding: 10px;
+      border: 1px solid #ccc;
+      top: 100%;
+      left: 0;
+      min-width: 200px;
+      z-index: 10;
+    }
+
+    .services-menu:hover .dropdown {
+      display: block;
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+    }
+
+    .content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #003366;
+      }
+
+      .menu-open {
+        display: flex;
+      }
+
+      .menu li {
+        padding: 10px;
+        margin: 0;
+        border-top: 1px solid rgba(255,255,255,0.1);
+      }
+
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .dropdown {
+        position: static;
+        display: none;
+        background: #002244;
+        padding: 10px;
+      }
+
+      .services-menu:hover .dropdown {
+        display: block;
+      }
+    }
